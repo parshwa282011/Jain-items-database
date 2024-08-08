@@ -1,0 +1,22 @@
+#nav {
+    background-color: lightgreen;
+    text-align: center;
+    border-color: black;
+    font-size: 50;
+}
+#input-area {
+    text-align:center;
+    align-items:center;
+    align-self:center;
+    top:1000px;
+}
+.output {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+#output-area {
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
