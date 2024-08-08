@@ -17,6 +17,6 @@ function postData(query){
     req.send();
 }
 function sendPost(){
-    var search = window.location.href.split("?q=")[1];
+    var search = window.location.href.split("?")[1];
     postData(JSON.stringify({"itemToResearch":search}));
 }
