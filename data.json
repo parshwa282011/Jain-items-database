@@ -1,3 +1,29 @@
 {
-  "test": "test"
+  "test": "test",
+  "brands":{
+    "brand":{
+      "product":"item",
+      "type":"brand"
+    },
+    "brand1":{
+      "product":"item",
+      "type":"brand"
+    },
+    "brand2":{
+      "product":"item",
+      "type":"brand"
+    },
+    "brand3":{
+      "product":"item",
+      "type":"brand"
+    }
+  },
+  "item":{
+    "item":{
+      "type":"item",
+      "item":"item",
+      "safe":["brand", "brand2"],
+      "unsafe":["brand1", "brand3"]
+    }
+  }
 }
