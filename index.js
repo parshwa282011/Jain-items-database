@@ -1,21 +1,7 @@
 import {PageType} from "./enum.js";
 var search = window.location.href.split("?")[1];
-console.log(search);
-function postData(query){
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://ccb9ccaa-640d-44a7-bf96-4ef3ac5bba3c-00-38vxd3ietij3j.worf.replit.dev:8080/");
-    //xhr.send(JSON.stringify(query))
-    xhr.responseType = "text"
-    xhr.onload = (e) => {
-        const text = req.response; // not responseText
-        console.log(text)
-        console.log(e);
-    };
-}
-function getData(){
-    fetch("data.json").then((response) => {
-        return response;
-    })
+async function getData(){
+    return (await fetch("data.json")).json()
 }
 function searchData(query,data){
     try{
@@ -45,16 +31,23 @@ if (search == undefined){
     pagetype = PageType["ItemPage"]
 }
 if (pagetype == PageType["ItemPage"]){
-    //var dat = getData();
-    //var data = searchData(search ,dat);
-    //if (data == "not Found"){
-    //    pagetype = PageType["NotFoundPage"];
-    //} else if (typeof(data) == typeof([])){
-    //    pagetype = PageType["DoubleFoundPage"]
-    //}
+    var dat = await getData();
+    var data = searchData(search.toLowerCase() ,dat);
+    if (data == "not Found"){
+        pagetype = PageType["NotFoundPage"];
+    } else if (typeof(data[0]) == typeof([])){
+        pagetype = PageType["DoubleFoundPage"]
+    } else if (data["type"] == "brand"){
+        data = Object.assign({}, data, dat["item"][data["product"]])
+    }
+}
+if (search != undefined){
+    pagetype
 }
 if (pagetype == PageType["NotFoundPage"]){
     var output = document.getElementById("output-area");
-    output.innerHTML = "<div class=\"output\"><div>Sorry No data found for this yet or invalid</div><button onclick=\"sendPost()\">Ask to research and add</button></div>"
+    output.innerHTML = "<div class=\"output\"><div>Sorry No data found for this yet or invalid</div><button id=\"output\" onclick=\"sendPost()\">Ask to research and add</button></div>"
+} else if(pagetype == PageType["ItemPage"]){
+    var output = document.getElementById("output-area");
+    output.innerHTML = "<div class=\"output\"><div>Item:<br>" + data["item"] + "</div><div>Safe to use brands:<br>" + data["safe"] + "</div><div>Not Safe to use brands:<br>"+ data["unsafe"] +"</div><br>if the brand you are looking for isn't shown then instead put the brand as request and click button for us to reasearch that brand</div>"
 }
-postData("hi");
