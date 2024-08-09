@@ -10,7 +10,7 @@ function searchData(query,data){
         var brand = null;
     }
     try{
-        var item = data["item"][query];
+        var item = data["items"][query];
     } catch {
         var item = null;
     }
@@ -38,7 +38,7 @@ if (pagetype == PageType["ItemPage"]){
     } else if (typeof(data[0]) == typeof([])){
         pagetype = PageType["DoubleFoundPage"]
     } else if (data["type"] == "brand"){
-        data = Object.assign({}, data, dat["item"][data["product"]])
+        data = Object.assign({}, data, dat["items"][data["product"]])
     }
 }
 if (search != undefined){

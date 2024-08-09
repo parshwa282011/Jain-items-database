@@ -1,29 +1,63 @@
 {
-  "test": "test",
   "brands":{
-    "brand":{
-      "product":"item",
+    "breakstone's":{
+      "product":"Sourcream",
+      "type":"brand"
+    }, "cabot":{
+      "product":"Sourcream",
+      "type":"brand"
+    }, "daisy":{
+      "product":"Sourcream",
+      "type":"brand"
+    }, "green valley":{
+      "product":"Sourcream",
       "type":"brand"
     },
-    "brand1":{
-      "product":"item",
+    "haribo":{
+      "product":"Gummies",
+      "type":"brand"
+    }, "sweet smart":{
+      "product":"Gummies",
+      "type":"brand"
+    }, "black forest":{
+      "product":"Gummies",
+      "type":"brand"
+    }, "albanese":{
+      "product":"Gummies",
       "type":"brand"
     },
-    "brand2":{
-      "product":"item",
+    "savera":{
+      "product":"Paneer",
       "type":"brand"
-    },
-    "brand3":{
-      "product":"item",
+    }, "mother's dairy":{
+      "product":"Paneer",
+      "type":"brand"
+    }, "brar":{
+      "product":"Paneer",
+      "type":"brand"
+    }, "apna teste":{
+      "product":"Paneer",
       "type":"brand"
     }
   },
   "item":{
-    "item":{
+    "Sourcream":{
       "type":"item",
-      "item":"item",
-      "safe":["brand", "brand2"],
-      "unsafe":["brand1", "brand3"]
+      "item":"Sourcream",
+      "safe":["Kite Hill"],
+      "unsafe":["Breakstone's",  "Cabot", "Daisy", "Green Valley"]
+    },
+    "Gummies":{
+      "type":"item",
+      "item":"Gummies",
+      "safe":["Urb"],
+      "unsafe":["Haribo", "Sweet Smart", "Black Forest", "Albanese"]
+    },
+    "Paneer":{
+      "type":"item",
+      "item":"Paneer",
+      "safe":["None Found Yet"],
+      "unsafe":["Savera", "Mother's Dairy", "Brar", "Apna Teste"]
     }
   }
 }
