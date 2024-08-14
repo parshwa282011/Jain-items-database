@@ -32,7 +32,7 @@ if (search == undefined){
 }
 if (pagetype == PageType["ItemPage"]){
     var dat = await getData();
-    var data = searchData(search.toLowerCase() ,dat);
+    var data = searchData(search ,dat);
     if (data == "not Found"){
         pagetype = PageType["NotFoundPage"];
     } else if (typeof(data[0]) == typeof([])){

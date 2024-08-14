@@ -1,61 +1,61 @@
 {
   "brands":{
-    "breakstone's":{
-      "product":"Sourcream",
+    "breakstones":{
+      "product":"sourcream",
       "type":"brand"
     }, "cabot":{
-      "product":"Sourcream",
+      "product":"sourcream",
       "type":"brand"
     }, "daisy":{
-      "product":"Sourcream",
+      "product":"sourcream",
       "type":"brand"
-    }, "green valley":{
-      "product":"Sourcream",
+    }, "green%20valley":{
+      "product":"sourcream",
       "type":"brand"
     },
     "haribo":{
-      "product":"Gummies",
+      "product":"gummies",
       "type":"brand"
-    }, "sweet smart":{
-      "product":"Gummies",
+    }, "sweet%20smart":{
+      "product":"gummies",
       "type":"brand"
-    }, "black forest":{
-      "product":"Gummies",
+    }, "black%20forest":{
+      "product":"gummies",
       "type":"brand"
     }, "albanese":{
-      "product":"Gummies",
+      "product":"gummies",
       "type":"brand"
     },
     "savera":{
-      "product":"Paneer",
+      "product":"paneer",
       "type":"brand"
     }, "mother's dairy":{
-      "product":"Paneer",
+      "product":"paneer",
       "type":"brand"
     }, "brar":{
-      "product":"Paneer",
+      "product":"paneer",
       "type":"brand"
-    }, "apna teste":{
-      "product":"Paneer",
+    }, "apna%20teste":{
+      "product":"paneer",
       "type":"brand"
     }
   },
-  "item":{
-    "Sourcream":{
+  "items":{
+    "sourcream":{
       "type":"item",
-      "item":"Sourcream",
+      "item":"sourcream",
       "safe":["Kite Hill"],
-      "unsafe":["Breakstone's",  "Cabot", "Daisy", "Green Valley"]
+      "unsafe":["Breakstones",  "Cabot", "Daisy", "Green Valley"]
     },
-    "Gummies":{
+    "gummies":{
       "type":"item",
-      "item":"Gummies",
+      "item":"gummies",
       "safe":["Urb"],
       "unsafe":["Haribo", "Sweet Smart", "Black Forest", "Albanese"]
     },
-    "Paneer":{
+    "paneer":{
       "type":"item",
-      "item":"Paneer",
+      "item":"paneer",
       "safe":["None Found Yet"],
       "unsafe":["Savera", "Mother's Dairy", "Brar", "Apna Teste"]
     }
